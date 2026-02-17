@@ -5,10 +5,9 @@ import Link from "next/link";
 import { Megaphone, ArrowRight, Accessibility, Shield, Users } from "lucide-react";
 import { Button } from "@/components/";
 
-const Home = () => {
+export const Home = () => {
   return (
     <div className="main-container flex flex-col">
-      {/* Header */}
       <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,14 +22,12 @@ const Home = () => {
         </p>
       </motion.header>
 
-      {/* Main content */}
       <motion.main
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
         className="flex flex-1 flex-col justify-center space-y-8 py-8"
       >
-        {/* Explicação */}
         <section className="rounded-2xl bg-card p-6 shadow-sm">
           <h2 className="mb-3 text-xl font-semibold text-foreground">O que é a ouvidoria?</h2>
           <p className="text-muted-foreground leading-relaxed">
@@ -41,16 +38,14 @@ const Home = () => {
           </p>
         </section>
 
-        {/* Botão principal */}
         <Button variant="action" size="touch-lg" asChild className="w-full gap-3 text-xl">
-          <Link href="/escolha-tipo">
+          <Link href="/choose-type">
             <Megaphone className="h-6 w-6" />
             Registrar manifestação
             <ArrowRight className="h-5 w-5" />
           </Link>
         </Button>
 
-        {/* Features */}
         <section className="grid grid-cols-3 gap-3">
           <div className="flex flex-col items-center gap-2 rounded-xl bg-muted p-4 text-center">
             <Accessibility className="h-6 w-6 text-primary" />
@@ -67,7 +62,6 @@ const Home = () => {
         </section>
       </motion.main>
 
-      {/* Footer */}
       <motion.footer
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -89,5 +83,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

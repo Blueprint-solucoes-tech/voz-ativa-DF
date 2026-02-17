@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Voz Ativa DF
 
-## Getting Started
+O **Voz Ativa DF** e uma aplicacao web progressiva (PWA) desenvolvida para ampliar a participacao cidada por meio da Ouvidoria do Distrito Federal.
 
-First, run the development server:
+A solucao permite que cidadaos registrem manifestacoes em multiplos formatos de midia:
+
+- Texto
+- Audio
+- Video
+- Imagem
+
+O projeto foi concebido com foco em **acessibilidade digital**, **usabilidade** e **inclusao**, para atender diferentes perfis de usuarios, incluindo pessoas com deficiencia e usuarios com baixa familiaridade tecnologica.
+
+## Objetivo
+
+Fortalecer o controle social e a transparencia publica por meio de uma interface simples, mobile-first e acessivel, permitindo que qualquer cidadao possa exercer seu direito de manifestacao de forma clara e democratica.
+
+## Proposta de Valor
+
+O Voz Ativa DF aproxima governo e sociedade por meio da tecnologia, promovendo inclusao digital, participacao cidada e inovacao no controle social.
+
+## Tecnologias
+
+### Base atual (implementada)
+
+- Next.js (App Router)
+- TypeScript
+- React
+- Tailwind CSS
+- Vitest + Testing Library (testes unitarios)
+
+### Direcao arquitetural (em evolucao)
+
+- PWA (Service Workers e instalacao como app)
+- Web APIs para captura de midia (audio/video/imagem)
+- Boas praticas de acessibilidade (WCAG)
+- Padrao **MVVM** para organizacao de telas e regras de negocio
+- Evolucao para uma base alinhada a principios da **T3 Stack**
+- Testes end-to-end (C2) com **Playwright**
+
+> Observacao: nem todos os itens acima estao 100% implementados no momento. Este README registra a visao e o direcionamento tecnico do projeto.
+
+## Diferenciais de UX e Acessibilidade
+
+- Navegacao acessivel por teclado
+- Compatibilidade com leitores de tela
+- Alto contraste e tipografia legivel
+- Interface mobile-first
+- Instalacao como aplicativo (PWA)
+- Experiencia simplificada e orientada ao cidadao
+
+## Como rodar o projeto
+
+### Requisitos
+
+- Node.js 20+
+- npm (ou gerenciador compativel)
+
+### Desenvolvimento
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicacao ficara disponivel em `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts uteis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run lint:fix
+npm run test
+npm run test:ui
+npm run build
+npm run start
+```
 
-## Learn More
+## Status do projeto
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Projeto em desenvolvimento ativo. A estrutura atual ja contempla fluxos principais de manifestacao e esta sendo evoluida para maior robustez arquitetural (MVVM/T3) e ampliacao da cobertura de testes (unitarios + Playwright).
